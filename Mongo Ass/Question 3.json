@@ -1,0 +1,25 @@
+// 3. Write a MongoDB query to display the first 5 restaurant in ascending order of name field.
+
+use('restorent')
+
+db.restorent.find({}, {"name":1, _id:0}).sort({"name":1}).limit(5)
+
+// Exicuted Query Results
+
+[
+  {
+    "name": "1 East 66Th Street Kitchen"
+  },
+  {
+    "name": "Brunos On The Boulevard"
+  },
+  {
+    "name": "C & C Catering Service"
+  },
+  {
+    "name": "Carvel Ice Cream"
+  },
+  {
+    "name": "Carvel Ice Cream"
+  }
+]

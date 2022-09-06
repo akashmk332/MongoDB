@@ -1,0 +1,46 @@
+// 7. Write a MongoDB query to find the restaurant name, longitude and latitude and cuisine for those restaurants which contain 'Car' as first three letters of its name.
+
+use('restorent')
+//[Note: Actually am not using that word "Caf" so thats why Am taken the word "Car" in my created database]
+db.restorent.find(
+                   { name : 
+                     { $regex : /^Car/i, } 
+                   },
+                       {
+                         "name":1,
+                         "borough":1,
+                         "address.coord":1,
+                         "cuisine" :1
+                        }
+                   );
+
+// Exicuted Query Results
+
+[
+  {
+    "_id": {
+      "$oid": "6316d248db6f99c9eecafdbf"
+    },
+    "address": {
+      "coord": [
+        -73.97822040000001,
+        40.6435254
+      ]
+    },
+    "cuisine": "Ice Cream, Gelato, Yogurt, Ices",
+    "name": "Carvel Ice Cream"
+  },
+  {
+    "_id": {
+      "$oid": "6316d2cba7171a99cefda908"
+    },
+    "address": {
+      "coord": [
+        -73.97822040000001,
+        40.6435254
+      ]
+    },
+    "cuisine": "Ice Cream, Gelato, Yogurt, Ices",
+    "name": "Carvel Ice Cream"
+  }
+]

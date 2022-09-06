@@ -1,0 +1,7 @@
+// 4. Write a MongoDB query to display the next 5 restaurants after skipping first 5.
+
+use('restorent')
+
+db.restorent.find({grades : { $elemMatch:{"score":{$gt : 90}}}});
+
+// Exicuted Query Results

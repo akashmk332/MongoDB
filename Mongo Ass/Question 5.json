@@ -1,0 +1,416 @@
+// 5. Write a MongoDB query to find the restaurants who achieved a score more than 90.
+
+use('restorent')
+
+db.restorent.find({grades : { $elemMatch:{"score":{$gt : 90}}}}).pretty();
+
+// Exicuted Query Results
+
+[
+  {
+    "_id": {
+      "$oid": "631617d0f1b12d9fd46afc85"
+    },
+    "address": {
+      "building": "1007",
+      "coord": [
+        -73.856077,
+        40.848447
+      ],
+      "street": "Mall Road Mussorrie",
+      "zipcode": "10462"
+    },
+    "cuisine": "Bakery",
+    "grades": [
+      {
+        "date": {
+          "$date": 1393804800000
+        },
+        "grade": "B",
+        "score": 80
+      },
+      {
+        "date": {
+          "$date": 1378857600000
+        },
+        "grade": "B",
+        "score": 85
+      },
+      {
+        "date": {
+          "$date": 1358985600000
+        },
+        "grade": "A",
+        "score": 90
+      },
+      {
+        "date": {
+          "$date": 1322006400000
+        },
+        "grade": "A",
+        "score": 95
+      },
+      {
+        "date": {
+          "$date": 1299715200000
+        },
+        "grade": "A",
+        "score": 100
+      }
+    ],
+    "name": "Morris Bake Shop",
+    "restaurant_id": "30075445"
+  },
+  {
+    "_id": {
+      "$oid": "631619cc939e7d6cfa757b8e"
+    },
+    "address": {
+      "building": "351",
+      "coord": [
+        -73.98513559999999,
+        40.7676919
+      ],
+      "street": "West   57 Street",
+      "zipcode": "10019"
+    },
+    "cuisine": "Irish",
+    "grades": [
+      {
+        "date": "32601964812647)",
+        "grade": "B",
+        "score": 81
+      },
+      {
+        "date": "2387567258147",
+        "grade": "B",
+        "score": 86
+      },
+      {
+        "date": "3275723859587",
+        "grade": "A",
+        "score": 91
+      },
+      {
+        "date": "893274147170",
+        "grade": "A",
+        "score": 96
+      },
+      {
+        "date": "87326745623164",
+        "grade": "B",
+        "score": 82
+      }
+    ],
+    "name": "Dj Reynolds Pub And Restaurant",
+    "restaurant_id": "30191841"
+  },
+  {
+    "_id": {
+      "$oid": "63161fd97d5d9322e4b92948"
+    },
+    "address": {
+      "building": "469",
+      "coord": [
+        -73.961704,
+        40.662942
+      ],
+      "street": "Flatbush Avenue",
+      "zipcode": "11225"
+    },
+    "cuisine": "Hamburgers",
+    "grades": [
+      {
+        "date": "12276454652658",
+        "grade": "B",
+        "score": 82
+      },
+      {
+        "date": "237456418756",
+        "grade": "B",
+        "score": 87
+      },
+      {
+        "date": "487575403275",
+        "grade": "A",
+        "score": 92
+      },
+      {
+        "date": "32457659154",
+        "grade": "A",
+        "score": 97
+      },
+      {
+        "date": "23456723723875",
+        "grade": "B",
+        "score": 83
+      }
+    ],
+    "name": "Wendy'S",
+    "restaurant_id": "30112340"
+  },
+  {
+    "_id": {
+      "$oid": "631620f0f5a5a0e0dde01e35"
+    },
+    "address": {
+      "building": "8825",
+      "coord": [
+        -73.8803827,
+        40.7643124
+      ],
+      "street": "Astoria Boulevard",
+      "zipcode": "11369"
+    },
+    "cuisine": "American ",
+    "grades": [
+      {
+        "date": "126745273569",
+        "grade": "B",
+        "score": 83
+      },
+      {
+        "date": "24791595141",
+        "grade": "B",
+        "score": 88
+      },
+      {
+        "date": "32876518081",
+        "grade": "A",
+        "score": 93
+      },
+      {
+        "date": "238578275212",
+        "grade": "A",
+        "score": 98
+      },
+      {
+        "date": "32875687599",
+        "grade": "B",
+        "score": 84
+      }
+    ],
+    "name": "Brunos On The Boulevard",
+    "restaurant_id": "40356151"
+  },
+  {
+    "_id": {
+      "$oid": "6316227c4be2c266c8ec2025"
+    },
+    "address": {
+      "building": "97-22",
+      "coord": [
+        -73.8601152,
+        40.7311739
+      ],
+      "street": "63 Road",
+      "zipcode": "11374"
+    },
+    "cuisine": "Jewish/Kosher",
+    "grades": [
+      {
+        "date": "12745823562",
+        "grade": "B",
+        "score": 84
+      },
+      {
+        "date": "32864754602",
+        "grade": "B",
+        "score": 89
+      },
+      {
+        "date": "328576023455",
+        "grade": "A",
+        "score": 94
+      },
+      {
+        "date": "3275783252323",
+        "grade": "A",
+        "score": 99
+      },
+      {
+        "date": "3285708475031",
+        "grade": "B",
+        "score": 85
+      }
+    ],
+    "name": "Tov Kosher Kitchen",
+    "restaurant_id": "40356068"
+  },
+  {
+    "_id": {
+      "$oid": "631623b1b1fa69f2eb7b0929"
+    },
+    "address": {
+      "building": "2780",
+      "coord": [
+        -73.98241999999999,
+        40.579505
+      ],
+      "street": "Stillwell Avenue",
+      "zipcode": "11224"
+    },
+    "cuisine": "American ",
+    "grades": [
+      {
+        "date": "21742834582",
+        "grade": "B",
+        "score": 85
+      },
+      {
+        "date": "325620450284",
+        "grade": "A",
+        "score": 90
+      },
+      {
+        "date": "2384081350134",
+        "grade": "A",
+        "score": 95
+      },
+      {
+        "date": "3287588279832",
+        "grade": "A",
+        "score": 100
+      },
+      {
+        "date": "302834765567809",
+        "grade": "B",
+        "score": 86
+      }
+    ],
+    "name": "Riviera Caterer",
+    "restaurant_id": "40356018"
+  },
+  {
+    "_id": {
+      "$oid": "6316252cdb4573a09c2e5c43"
+    },
+    "address": {
+      "building": "6409",
+      "coord": [
+        -74.00528899999999,
+        40.628886
+      ],
+      "street": "11 Avenue",
+      "zipcode": "11219"
+    },
+    "cuisine": "American ",
+    "grades": [
+      {
+        "date": "21571610987",
+        "grade": "B",
+        "score": 86
+      },
+      {
+        "date": "214576432834",
+        "grade": "A",
+        "score": 91
+      },
+      {
+        "date": "4675283258712",
+        "grade": "A",
+        "score": 96
+      },
+      {
+        "date": "3286565416528",
+        "grade": "B",
+        "score": 81
+      },
+      {
+        "date": "34671216509123",
+        "grade": "B",
+        "score": 87
+      }
+    ],
+    "name": "Regina Caterers",
+    "restaurant_id": "40356649"
+  },
+  {
+    "_id": {
+      "$oid": "6316271432826617436532cd"
+    },
+    "address": {
+      "building": "7114",
+      "coord": [
+        -73.9068506,
+        40.6199034
+      ],
+      "street": "Avenue U",
+      "zipcode": "11234"
+    },
+    "cuisine": "Delicatessen",
+    "grades": [
+      {
+        "date": "5442456709",
+        "grade": "B",
+        "score": 87
+      },
+      {
+        "date": "08897532134",
+        "grade": "A",
+        "score": 92
+      },
+      {
+        "date": "098864455340",
+        "grade": "A",
+        "score": 97
+      },
+      {
+        "date": "432578876969",
+        "grade": "B",
+        "score": 83
+      },
+      {
+        "date": "12387467809887",
+        "grade": "B",
+        "score": 88
+      }
+    ],
+    "name": "Wilken'S Fine Food",
+    "restaurant_id": "40356483"
+  },
+  {
+    "_id": {
+      "$oid": "6316d19f5d33214bebe662af"
+    },
+    "address": {
+      "building": "42",
+      "coord": [
+        -73.82948700000001,
+        40.657432
+      ],
+      "street": "Broadway",
+      "zipcode": "11414"
+    },
+    "cuisine": "Other",
+    "grades": [
+      {
+        "date": "82358722354",
+        "grade": "A",
+        "score": 78
+      },
+      {
+        "date": "64518101124",
+        "grade": "B",
+        "score": 67
+      },
+      {
+        "date": "974936591991",
+        "grade": "C",
+        "score": 23
+      },
+      {
+        "date": "12675718199164",
+        "grade": "B",
+        "score": 46
+      },
+      {
+        "date": "326752386718",
+        "grade": "A",
+        "score": 98
+      }
+    ],
+    "name": "Laquana King",
+    "restaurant_id": "50003441"
+  }
+]

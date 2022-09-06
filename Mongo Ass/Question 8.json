@@ -1,0 +1,117 @@
+// 8. Write a MongoDb query to update grade B to A in all documents.
+
+use('restorent')
+
+db.restorent.update(
+...    {
+...
+...       "grades.grade":B,
+...
+...    },
+...    {
+...       $set: {
+...          "grades.grade":A,
+...       }
+...    }
+... );
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+// Exicuted Query Results
+
+[
+  {
+    _id: ObjectId("63162b2550c2fcf944041aaa"),
+    address: {
+      building: '7715',
+      coord: [ -73.9973325, 40.61174889999999 ],
+      street: '18 Avenue',
+      zipcode: '11214'
+    },
+    cuisine: 'American ',
+    grades: [
+      { date: '273154198302', grade: 'C', score: 18 },
+      { date: '216478236758', grade: 'A', score: 26 },
+      { date: '238658275879', grade: 'C', score: 15 },
+      { date: '328568364502', grade: 'A', score: 35 },
+      { date: '65187165716879', grade: 'A', score: 42 }
+    ],
+    name: 'C & C Catering Service',
+    restaurant_id: '40357437'
+  },
+  {
+    _id: ObjectId("63162bb4e0b4945bfe84a80b"),
+    address: {
+      building: '1269',
+      coord: [ -73.871194, 40.6730975 ],
+      street: 'Sutter Avenue',
+      zipcode: '11208'
+    },
+    cuisine: 'Chinese',
+    grades: [
+      { date: '3265018650801', grade: 'B', score: 21 },
+      { date: '214517534191', grade: 'A', score: 7 },
+      { date: '326587351601', grade: 'C', score: 56 },
+      { date: '167417658219', grade: 'A', score: 27 },
+      { date: '326417451891', grade: 'A', score: 27 }
+    ],
+    name: 'May May Kitchen',
+    restaurant_id: '40358429'
+  },
+  {
+    _id: ObjectId("63162c8f33d917bcbfe099ae"),
+    address: {
+      building: '1',
+      coord: [ -73.96926909999999, 40.7685235 ],
+      street: 'East   66 Street',
+      zipcode: '10065'
+    },
+    cuisine: 'American ',
+    grades: [
+      { date: '326845262060', grade: 'A', score: 39 },
+      { date: '365165086450', grade: 'A', score: 14 },
+      { date: '124516509809', grade: 'A', score: 46 },
+      { date: '1267358256720', grade: 'A', score: 63 },
+      { date: '3274519915696', grade: 'A', score: 70 }
+    ],
+    name: '1 East 66Th Street Kitchen',
+    restaurant_id: '40359480'
+  },
+  {
+    _id: ObjectId("63162d19f9e35616bcfe51b9"),
+    address: {
+      building: '705',
+      coord: [ -73.9653967, 40.6064339 ],
+      street: 'Kings Highway',
+      zipcode: '11223'
+    },
+    cuisine: 'Jewish/Kosher',
+    grades: [
+      { date: '23856816581', grade: 'A', score: 11 },
+      { date: '90175216582', grade: 'A', score: 13 },
+      { date: '635681513276', grade: 'A', score: 7 },
+      { date: '124512598198', grade: 'A', score: 9 },
+      { date: '3265891896164', grade: 'A', score: 19 }
+    ],
+    name: 'Seuda Foods',
+    restaurant_id: '40360045'
+  },
+  {
+    _id: ObjectId("6316d19f5d33214bebe662af"),
+    address: {
+      building: '42',
+      coord: [ -73.82948700000001, 40.657432 ],
+      street: 'Broadway',
+      zipcode: '11414'
+    },
+    cuisine: 'Other',
+    grades: [
+      { date: '82358722354', grade: 'A', score: 78 },
+      { date: '64518101124', grade: 'A', score: 67 },
+      { date: '974936591991', grade: 'C', score: 23 },
+      { date: '12675718199164', grade: 'A', score: 46 },
+      { date: '326752386718', grade: 'A', score: 98 }
+    ],
+    name: 'Laquana King',
+    restaurant_id: '50003441'
+  }
+]
